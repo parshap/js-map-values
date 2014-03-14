@@ -1,4 +1,4 @@
-# is-integer
+# map-values
 
 Map object values returning a new object.
 
