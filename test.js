@@ -1,8 +1,8 @@
 "use strict";
 
-var test = require("tape");
-var assert = require("assert");
-var map = require("./");
+const test = require("baretest")(require('./package.json').name);
+const assert = require("assert");
+const map = require("./");
 
 test("should map object", function(t) {
 	var obj = map({ foo: 2, bar: 5 }, function(val) {
@@ -12,3 +12,5 @@ test("should map object", function(t) {
 	assert(obj.foo === 4);
 	assert(obj.bar === 10);
 });
+
+test.run()

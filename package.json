@@ -18,6 +18,6 @@
   "author": "Parsha Pourkhomami",
   "license": "Public Domain",
   "devDependencies": {
-    "tape": "^2.10.2"
+    "baretest": "^2.0.0"
   }
 }
