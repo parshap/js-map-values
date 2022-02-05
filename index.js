@@ -1,13 +1,3 @@
 "use strict";
 
-var hasOwnProperty = Object.prototype.hasOwnProperty;
-
-module.exports = function(obj, map) {
-	var result = {};
-	for (var key in obj) {
-		if (hasOwnProperty.call(obj, key)) {
-			result[key] = map(obj[key], key, obj);
-		}
-	}
-	return result;
-};
+module.exports = (obj, map) => Object.fromEntries(Object.entries(obj).map(([key, value]) => [key, map(value, key, obj)]))
